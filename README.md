@@ -83,6 +83,43 @@ updates in place.
 
 webpack is held at 5.106: newer releases don't build with `@module-federation/enhanced` 2.9.
 
+## Change the theme
+
+The page takes its look from your copy's theme. There are two bases, `neutral` and `midnight`, and
+five accents, `steel`, `violet`, `emerald`, `ember` and `ice`: `npx appshell theme list` shows
+them.
+
+**To try one in your browser only,** with `npm start` running, from another terminal here:
+
+```sh
+npx appshell dev start --theme midnight-violet
+```
+
+Then reload the page. `--theme neutral-ice` switches back.
+
+**To give your copy a theme for everyone who opens it,** save this as `theme.yaml`:
+
+```yaml
+apiVersion: registry.appshell.org/v1
+kind: Application
+name: <scope>/starter
+spec:
+  shell:
+    theme:
+      base: midnight
+      accent: violet
+      colorScheme: dark
+```
+
+and apply it:
+
+```sh
+npx appshell app apply -f theme.yaml
+```
+
+Your copy keeps its title and what it runs. `npx appshell app revisions` lists its revisions, and
+`npx appshell app rollback --to <revision>` goes back to one.
+
 ## When you're done
 
 `Ctrl-C` stops the dev server. The overlay stays open until it expires or you close it:
