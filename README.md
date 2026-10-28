@@ -6,6 +6,17 @@ application your users would see, without publishing anything.
 
 The hosted registry is in an invite-only beta. You'll need an invite and Node 24.
 
+**On a network that inspects HTTPS,** as many companies' do, Node won't trust the certificate
+authority your network re-signs traffic with until it's told to use your system's certificates.
+Run this in the shell you'll use for the steps below, since both the CLI and `npm start` need it:
+
+```sh
+export NODE_USE_SYSTEM_CA=1
+```
+
+**If the verification email doesn't arrive** when you sign up, check your spam or quarantine, and
+allow `noreply@appshell.org`.
+
 ## Try it
 
 **1. Clone this, install, and point the CLI at the hosted registry.** Pick a scope, the name
