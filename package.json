@@ -1,0 +1,40 @@
+{
+  "name": "hello",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A first micro-frontend on appshell: a page in a hosted application, run from your machine",
+  "license": "Apache-2.0",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "react": "19.3.1",
+    "react-dom": "19.3.1"
+  },
+  "devDependencies": {
+    "@appshell/cli": "1.0.0-alpha.146",
+    "@appshell/webpack-plugin": "1.0.0-alpha.146",
+    "@babel/core": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@babel/preset-typescript": "^7.27.1",
+    "@module-federation/enhanced": "^2.9.2",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.6.3",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "babel-loader": "^10.0.0",
+    "css-loader": "^7.1.4",
+    "react-refresh": "^0.19.0",
+    "single-react-refresh-plugin": "^1.0.1",
+    "style-loader": "^4.0.0",
+    "typescript": "^5.9.0",
+    "webpack": "~5.106.2",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.2",
+    "webpack-merge": "^6.0.1"
+  },
+  "engines": {
+    "node": ">=24"
+  }
+}

@@ -1,0 +1,11 @@
+# What this micro-frontend contributes to the application it runs in. The workspace reads each
+# component's metadata to build its navigation: the route the component is mounted at, the
+# entry's label and icon (one of lucide.dev's icons, by name), and where it's listed.
+components:
+  HelloModule/Hello:
+    metadata:
+      route: /hello
+      displayName: Hello
+      displayGroup: primary
+      order: 10
+      icon: hand
